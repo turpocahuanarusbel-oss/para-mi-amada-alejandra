@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#26151c">
+<meta name="description" content="Una historia escrita para Alejandra, con amor.">
+<title>Para Alejandra · En todas mis vidas, tú</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div id="stars" aria-hidden="true"></div><div id="petals" aria-hidden="true"></div>
+<a class="skip" href="#app">Ir a la historia</a>
+<header class="topbar" id="topbar" hidden><button id="menuToggle" class="nav-circle" aria-label="Abrir navegación">☰</button><span class="brand">A <span>♡</span> A</span><span class="chapter-count" id="chapterCounter">♡</span></header>
+<div id="progress" class="progress" hidden><span id="progressFill"></span></div>
+<nav class="chapter-menu" id="chapterMenu" aria-label="Secciones" hidden><div class="menu-card"><button id="closeMenu" class="menu-close" aria-label="Cerrar menú">✕</button><p class="eyebrow">Los rincones de nuestra historia</p><div id="menuItems"></div></div></nav>
+<div class="music" id="musicWidget" hidden><button id="musicToggle" class="music-btn" title="Reproducir o pausar música" aria-label="Reproducir o pausar música">♫</button><div class="music-label"><span id="musicStatus">Nuestra canción</span><small>Si te vieras como yo te veo</small></div><button id="volumeToggle" aria-label="Silenciar o activar sonido" title="Silenciar sonido">◖))</button></div>
+<audio id="bgMusic" src="assets/audio/si_te_vieras_como_yo_te_veo.mp3" preload="auto" loop playsinline></audio>
+<main id="app">
+<section class="screen cover active" data-chapter="0" aria-label="Portada">
+ <div class="cover-image" role="img" aria-label="Sobre antiguo de color rojo con sello de cera"></div><div class="cover-shade"></div>
+ <div class="cover-content"><div class="cover-top"><span class="line-ornament">✦ &nbsp; UNA CARTA PARA TI &nbsp; ✦</span><h1>Feliz aniversario,<br><em>mi amada Alejandra</em></h1><p>Hay historias que el tiempo escribe en el alma.</p></div><button id="openLetter" class="seal-button" aria-label="Abrir el sobre y comenzar la historia"><span>✦</span><small>TOCA PARA ABRIR EL SOBRE</small></button><p class="cover-foot">Con todo mi amor · Una historia solo nuestra</p></div>
+</section>
+<section class="screen chapter" data-chapter="1" aria-label="El primer encuentro">
+ <div class="chapter-inner opening-inner"><p class="eyebrow">EL COMIENZO</p><h2>El día en que <em>todo cambió</em></h2><p class="chapter-sub">Entre tantos caminos, el destino eligió el nuestro.</p><div class="opening-photo photo-frame"><img src="assets/fotos/arco_portada.webp" alt="Recuerdo juntos bajo un arco iluminado" loading="lazy"></div><p class="eyebrow">UN INSTANTE QUE QUIERO GUARDAR</p><div class="paper letter"><span class="paper-corner">❦</span><p id="openingText"></p></div><button class="next-btn" data-next="2">Y después de encontrarte… <span>→</span></button></div>
+</section>
+<section class="screen chapter celestial" data-chapter="2" aria-label="Estrellas y poemas">
+ <div class="chapter-inner"><p class="eyebrow">CONFESIONES</p><h2>Hay cosas que solo <em>las estrellas saben</em></h2><p class="chapter-sub">Toca cada estrella. Hay palabras que estaban esperando por ti.</p><div class="constellation" id="constellation"><button class="star s1" data-poem="poemaInvierno" aria-label="Descubrir el primer poema">✦</button><button class="star s2" data-poem="poemaEternidad" aria-label="Descubrir el segundo poema">✧</button><button class="star s3" data-poem="poemaNosotros" aria-label="Descubrir el tercer poema">✦</button><button class="star s4" data-poem="poemaAire" aria-label="Descubrir el cuarto poema">✧</button><div class="constellation-note" id="poemDisplay"><span>✧</span><p>Hay cuatro pensamientos escondidos en este cielo…</p></div></div><div class="discovery-counter" id="discoveredStars">0 de 4 estrellas descubiertas</div><button class="next-btn" data-next="3">Nuestros momentos, uno por uno <span>→</span></button></div>
+</section>
+<section class="screen chapter gallery-chapter" data-chapter="3" aria-label="Álbum de recuerdos">
+ <div class="chapter-inner wide"><p class="eyebrow">RECUERDOS</p><h2>Instantes pequeños, <em>infinitos para mí</em></h2><p class="chapter-sub">Cada fotografía guarda algo que no quisiera olvidar. Tócala para descubrir sus palabras.</p><div class="gallery" id="gallery"></div><p class="gallery-foot">No todas las fotografías son perfectas. Lo maravilloso es haber estado ahí, contigo.</p><button class="next-btn" data-next="4">Lo que siempre quise decirte <span>→</span></button></div>
+</section>
+<section class="screen chapter promise-chapter" data-chapter="4" aria-label="Una promesa de amor">
+ <div class="chapter-inner"><p class="eyebrow">UNA PROMESA</p><h2>La manera en que <em>quiero amarte</em></h2><div class="feature-photo"><img src="assets/fotos/nuestras_manos.webp" loading="lazy" alt="Las manos juntas y los anillos"></div><p class="chapter-sub">Una promesa hecha de cosas sencillas, pero inmensas.</p><div class="paper letter spacious"><p id="promiseText"></p><span class="signature">Con amor, siempre ♡</span></div><button class="next-btn" data-next="5">Escucha lo que sigue… <span>→</span></button></div>
+</section>
+<section class="screen chapter cinema-chapter" data-chapter="5" aria-label="Nuestra banda sonora">
+ <div class="chapter-inner"><p class="eyebrow">NUESTRAS MELODÍAS</p><h2>Hay canciones que <em>suenan a nosotros</em></h2><p class="chapter-sub">La melodía de fondo ya está aquí. Y guardé dos canciones más para descubrir juntas.</p><div class="cinema-box"><div class="film-frame"><img src="assets/fotos/noche_de_colores.webp" alt="Una noche de recuerdos y luces" loading="lazy"><div class="film-text">Un instante, una canción, un recuerdo</div></div><div class="song-links"><button class="song-item" data-video="QB1jB_LyCOY"><span class="song-icon">♫</span><span>Canción especial I<small>Toca para escucharla aquí</small></span><b>▷</b></button><button class="song-item" data-video="UmJOlQ_5s8A"><span class="song-icon">♫</span><span>Canción especial II<small>Otro rincón de nuestra historia</small></span><b>▷</b></button></div><div class="video-player" id="videoPlayer" hidden><div class="video-container" id="videoContainer"></div><p>Si el video no se reproduce aquí, <a href="#" id="externalVideo" target="_blank" rel="noopener noreferrer">abrirlo en YouTube</a>.</p><button class="outline-btn" id="closeVideo">Cerrar video y regresar a nuestra música</button></div></div><button class="next-btn" data-next="6">Todavía guardo un secreto… <span>→</span></button></div>
+</section>
+<section class="screen chapter game-chapter" data-chapter="6" aria-label="Un pequeño juego de amor">
+ <div class="chapter-inner"><p class="eyebrow">UN SECRETO</p><h2>Tres corazones, <em>una sola certeza</em></h2><p class="chapter-sub">Encuentra los tres corazones y descubre lo que quiero decirte.</p><div class="heart-game" id="heartGame"><button class="hidden-heart" data-heart="1" aria-label="Descubrir corazón uno">♡</button><button class="hidden-heart" data-heart="2" aria-label="Descubrir corazón dos">♡</button><button class="hidden-heart" data-heart="3" aria-label="Descubrir corazón tres">♡</button></div><div class="game-reveal" id="gameReveal"><p>Por cada corazón que descubres, una razón más para sonreír.</p></div><button class="next-btn" id="finalButton" data-next="7" disabled>Abre mi última carta <span>→</span></button></div>
+</section>
+<section class="screen chapter final-chapter" data-chapter="7" aria-label="La última carta">
+ <div class="chapter-inner"><p class="eyebrow">Y SIEMPRE TÚ</p><h2>Si volviera a existir, <em>volvería a encontrarte</em></h2><div class="final-photos"><img src="assets/fotos/beso_y_recuerdo.webp" alt="Un beso lleno de cariño" loading="lazy"><img src="assets/fotos/retrato_en_parque.webp" alt="Juntos en el parque" loading="lazy"><img src="assets/fotos/nota_bajo_las_estrellas.webp" alt="Nota de amor bajo las luces de la noche" loading="lazy"></div><div class="paper letter final-letter"><p id="endingText"></p></div><div class="closing-poem"><span>✦</span><h3>En todas mis vidas, tú.</h3><p>Para Alejandra, con todo el amor que cabe en una vida… y en las que vengan.</p><button class="primary-btn" id="finalHearts">Enviar todos mis corazones ♡</button></div><button class="outline-btn restart-btn" id="restart">Volver al principio ↺</button></div>
+</section>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="js/contenido.js"></script><script src="js/principal.js"></script>
+</body>
+</html>
